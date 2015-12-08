@@ -1,0 +1,57 @@
+\secly{Цели}
+
+\begin{itemize}
+\item универсальный язык описания входных данных для расчетных программ 
+и файлов конфигурации
+\item язык-шаблонизатор для генерации выходных файлов на любых других ЯП
+\begin{itemize}
+\item генерация проектов по набору шаблонных файлов
+\item мульти-платформенная разработка ПО
+\item формирование файлов конфигурации и управления работой кластерного ПО
+\end{itemize}
+\item средство программирования пользовательского GUI (реализация АРМ)
+\end{itemize}
+
+\secly{Установка}
+
+\begin{itemize}
+
+\item GitHub: \url{https://github.com/ponyatov/script.git}
+
+\item Ручная загрузка:
+\begin{itemize}[nosep]
+	\item win32 .exe \\
+		\url{https://github.com/ponyatov/script/raw/master/bI.exe}
+	\item руководство .pdf\\
+		\url{https://github.com/ponyatov/script/raw/master/manual_ru/manual.pdf}
+	\item тестовый Ы-скрипт\\
+		\url{https://github.com/ponyatov/script/raw/master/bI.bI}
+\end{itemize}
+
+\item Сборка из исходных файлов: 
+\begin{itemize}[nosep]
+	\item Windows (win32):
+		\begin{itemize}[nosep]
+			\item пакет компилятора GNU GCC/G++\\
+				MinGW \url{http://www.mingw.org/download/installer?}
+			\item Система управления версиями Git \\
+				git-scm \url{https://git-scm.com/downloads}
+			\item Текстовый редактор Vim\\
+				gvim \url{ftp://ftp.vim.org/pub/vim/pc/gvim74.exe}
+		\end{itemize}
+\begin{verbatim}
+git clone -o gh https://github.com/ponyatov/script.git bI_script
+cd bI_script
+mingw32-make EXE=.exe RES=res.res
+\end{verbatim}
+	\item Linux:
+\begin{verbatim}
+git clone -o gh https://github.com/ponyatov/script.git bI_script
+cd bI_script
+make EXE=.elf RES=
+\end{verbatim}
+\end{itemize}
+
+
+\end{itemize}
+

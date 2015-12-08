@@ -1,0 +1,65 @@
+\secrel{Учебник}\secdown
+
+\secly{Запуск}
+
+Ядро системы реализовано в виде единстеного .exe файла\note{консольная
+программа}. При простом запуске открывается интерактивная сессия, для загрузки
+скрипта из файла используйте команду
+
+\begin{verbatim}
+bI.exe < script.bI > script.blog
+\end{verbatim}
+
+В Linux исполняемым может быть сделан \emph{любой} файл, добавьте к своим
+скриптам первой строкой полный путь к bI.elf:
+\begin{verbatim}
+#!/home/user/bI_script/bI.elf
+\end{verbatim}
+и выполните команду
+\begin{verbatim}
+chmod +x script.bI
+\end{verbatim}
+
+\secly{Комментарии}
+
+Строчные комментарии начинаются с символа \#:
+
+\begin{verbatim}
+#!/home/user/bI_script/bI.elf
+# syntax sample with numbers, symbols, [] lists and stack ops
+# John McCarthy A Micro-Manual for Lisp - not the whole Truth.
+\end{verbatim}
+
+\secly{AST-тип}
+
+Язык bI реализован на базе символьных операций с элементами данных,
+представленных в виде типа AST:\\
+
+\begin{tabular}{l l l}
+class AST:sym & \\
+&string:tag & тип данных (тэг класса) \\
+&string:value & значение \\
+&sym:nest$[]$ & список вложенных элементов данных \\
+&string:dump() & вывод элемента данных в текстовом виде в виде дерева \\
+&string:tagval() & строковое представление только основной части <тэг:значение> \\
+&sym:eval() & вычисление (evaluate) элемента данных \\
+\end{tabular}
+
+\secly{Атомы (литералы)}
+
+\begin{itemize}[nosep]
+\item числа
+\begin{itemize}[nosep]
+\item целые:\\
+-01 -0 00 +0 +02222 $\rightarrow$ <int:-1> <int:0> <int:0> <int:0> <int:2222>
+\item с плавающей точкой в простой и экспоненциальной форме:\\
++02.30 -04E+05 $\rightarrow$ <num:2.3> <num:-400000>
+\item шестнадцатеричные и бинарные машинные константы:\\
+0x12AF 0b1101 $\rightarrow$ <hex:0x12AF> <bin:0b1101>
+\end{itemize}
+\item 'строки'
+\item символы\\
+symbol $\rightarrow$ <sym:symbol>
+\end{itemize}
+
+\secup
