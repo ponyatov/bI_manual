@@ -1,4 +1,4 @@
-TEX = manual.tex ../texheader/tinytitle.tex bib.tex
+TEX = manual.tex title.tex bib.tex
 TEX += header.tex ../texheader/ebook.tex ../texheader/cyr.tex
 TEX += ../texheader/relsec.tex ../texheader/misc.tex
 PNG  = ../script/logo/hedge64x64.png
