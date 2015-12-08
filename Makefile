@@ -9,7 +9,7 @@ TEX += about.tex
 
 TEX += tutor.tex
 
-TEX += libs.tex
+TEX += libs.tex math.tex
 
 TEX += syntax.tex
 
