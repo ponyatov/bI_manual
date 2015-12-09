@@ -52,7 +52,7 @@ class AST:sym & \\
 &sym:eval() & вычисление (evaluate) элемента данных \\
 \end{tabular}
 
-\secly{Атомы (литералы, скалярные объекты)}
+\secly{Скалярные типы (атомы, литералы)}
 
 \begin{itemize}[nosep]
 \item числа
@@ -69,7 +69,9 @@ class AST:sym & \\
 symbol $\rightarrow$ <sym:symbol>\\
 \end{itemize}
 
-\secly{Списки}
+\secrel{Композитные типы}\secdown
+
+\secly{Список}
 
 Список\ --- \termdef{композитная}\ структура данных, позволяющая рассматривать
 произвольный набор данных как один объект. Списки могут быть вложенными.
@@ -86,6 +88,10 @@ symbol
 ~ # dropall: полнолстью очистить стек данных
 ? # еще раз вывести стек
 \end{verbatim}
+
+\secly{Пара}
+
+\secup
 
 \secrel{Заимствования из языка \F}\secdown
 
@@ -199,5 +205,7 @@ over & ( A \textcolor{Blue}{B} C -- A B C \textcolor{Blue}{B} ) & вытащить копию
 \end{tabular}
 
 \secup
+
+\secrel{ООП}
 
 \secup
